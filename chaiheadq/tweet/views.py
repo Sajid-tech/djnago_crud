@@ -11,7 +11,7 @@ def index(request):
 # to list all tweet 
 
 def tweet_list(request):
-    tweets =Tweet.objects.all().order_by('-created_at')
+    tweets =Tweet.objects.all().order_by('-create_at')
     #------------(request, 'kaha pe serve krna hai', {all data})
     return render(request, 'tweet_list.html' ,{'tweets':tweets})
 
